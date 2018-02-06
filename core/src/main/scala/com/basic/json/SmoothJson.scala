@@ -15,10 +15,8 @@ object SmoothJson {
             result = str.contains(".")
             c = scala.util.Try(str.toDouble)
         } else if( "INT".equals(dtype) ) {
-            println(str)
             c = scala.util.Try(str.toInt)
         } else if( "LONG".equals(dtype) ) {
-            println(str)
             result = scala.util.Try(str.toInt).isInstanceOf[Failure[Int]]
             c = scala.util.Try(str.toLong)
         } else {
